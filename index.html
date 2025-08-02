@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>夏合宿 2025</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🌿 夏合宿 2025</h1>
+    <nav>
+      <button onclick="showTab('teams')">チーム分け</button>
+      <button onclick="showTab('items')">持ち物</button>
+      <button onclick="showTab('schedule')">スケジュール</button>
+    </nav>
+  </header>
 
+  <main>
+    <section id="teams" class="tab">ここにチーム分けの内容が入ります</section>
+    <section id="items" class="tab" style="display:none;">ここに持ち物リストが入ります</section>
+    <section id="schedule" class="tab" style="display:none;">ここにスケジュールが入ります</section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 夏合宿運営チーム</p>
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab').forEach(tab => tab.style.display = 'none');
+      document.getElementById(tabId).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
